@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather API Integration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🌤️ Weather App</h1>
+
+        <p class="subtitle">
+            Search live weather information
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name..."
+            >
+
+            <button onclick="getWeather()">
+                Search
+            </button>
+
+        </div>
+
+        <p id="loading"></p>
+
+        <div id="error"></div>
+
+        <div id="weatherCard" class="weather-card">
+
+            <h2 id="cityName"></h2>
+
+            <div class="weather-icon">
+                <img id="weatherIcon" src="" alt="Weather">
+            </div>
+
+            <h3 id="temperature"></h3>
+
+            <p id="description"></p>
+
+            <div class="weather-details">
+
+                <div class="detail">
+                    <span>💧</span>
+                    <p>Humidity</p>
+                    <strong id="humidity"></strong>
+                </div>
+
+                <div class="detail">
+                    <span>🌬️</span>
+                    <p>Wind Speed</p>
+                    <strong id="windSpeed"></strong>
+                </div>
+
+                <div class="detail">
+                    <span>🌡️</span>
+                    <p>Feels Like</p>
+                    <strong id="feelsLike"></strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
